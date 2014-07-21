@@ -1,16 +1,15 @@
-array = [1, 34, 54, 23, 11, 32, 10, 80]
+# Selection Sort
+
+array = [23, 34, 54, 23, 11, 32, 10, 80, 1, 99, 20]
 
 def sort(array)
-  temp = ''
-  array_length = array.length
-  0.upto(array_length) do |i|
-    0.upto(array_length - 1) do |j|
-      if(array[j] > array[j + 1])
-        puts array[j]
-        puts array[j + 1]
-        temp = array[j]
-        array[j] = array[j + 1]
-        array[j + 1] = temp
+  arr_length = array.length - 1
+  0.upto(arr_length) do |i|
+    (i+1).upto(arr_length) do |j|
+      if(array[i] > array[j])
+        temp = array[i]
+        array[i] = array[j]
+        array[j] = temp
       end
     end
   end
